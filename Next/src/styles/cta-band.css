@@ -1,0 +1,14 @@
+/* =========================================================
+   Next Z Solutions — CTA gradient band
+   ========================================================= */
+
+.cta-band {
+  background: linear-gradient(135deg, #3b1fb0, var(--purple) 55%, var(--purple-2));
+  color: #fff;
+  padding: 64px 0;
+  text-align: center;
+}
+.cta-inner h2 { color: #fff; }
+.cta-inner p { margin-top: 12px; opacity: .9; }
+.cta-inner .hero-actions { justify-content: center; }
+

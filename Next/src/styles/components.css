@@ -1,0 +1,68 @@
+/* =========================================================
+   Next Z Solutions — Reusable components (buttons, forms, icons)
+   ========================================================= */
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 13px 24px; border-radius: 999px; border: 1px solid transparent;
+  font-weight: 600; font-size: .98rem; cursor: pointer; line-height: 1.2;
+  transition: transform .2s var(--ease), box-shadow .2s var(--ease), background .2s, border-color .2s, color .2s;
+}
+.btn:hover { transform: translateY(-2px); }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--purple), var(--purple-2));
+  color: #fff;
+  box-shadow: 0 8px 24px rgba(109, 61, 245, .35);
+}
+.btn-primary:hover { box-shadow: 0 12px 30px rgba(109, 61, 245, .5); }
+
+.btn-ghost {
+  border-color: var(--border);
+  background: transparent;
+  color: var(--text);
+}
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+.btn-whatsapp {
+  background: #1fa855;
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(31, 168, 85, .3);
+}
+.btn-whatsapp:hover { background: #198a45; }
+
+.btn-light { background: #fff; color: #3b1fb0; }
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, .6);
+  color: #fff;
+}
+.btn-outline-light:hover { background: rgba(255, 255, 255, .12); }
+
+/* ---------- Form fields ---------- */
+.field { display: grid; gap: 7px; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+
+label { font-weight: 600; font-size: .9rem; }
+.opt { color: var(--muted); font-weight: 400; }
+
+input, select, textarea {
+  width: 100%; padding: 13px 14px; border-radius: var(--radius-sm);
+  border: 1px solid var(--border); background: var(--bg);
+  transition: border-color .2s, box-shadow .2s;
+}
+textarea { resize: vertical; min-height: 120px; }
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--purple);
+  box-shadow: 0 0 0 4px rgba(109, 61, 245, .2);
+}
+
+.field.invalid input,
+.field.invalid select,
+.field.invalid textarea { border-color: #ef5350; }
+
+.err { color: #ef5350; font-size: .82rem; min-height: 0; }
+

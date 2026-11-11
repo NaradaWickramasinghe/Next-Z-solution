@@ -1,0 +1,107 @@
+/* =========================================================
+   Next Z Solutions — Hero section
+   ========================================================= */
+
+.hero {
+  background: var(--hero-glow), var(--bg);
+  padding: clamp(64px, 9vw, 130px) 0;
+  overflow: hidden;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: clamp(36px, 5vw, 68px);
+  align-items: center;
+}
+
+h1 {
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -.03em;
+  font-weight: 800;
+}
+
+.grad {
+  background: linear-gradient(135deg, var(--purple-soft), var(--purple));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+.lead {
+  margin-top: 20px;
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+  color: var(--muted);
+  max-width: 60ch;
+  line-height: 1.6;
+}
+
+.hero-actions {
+  display: flex; flex-wrap: wrap; gap: 14px; margin-top: 32px;
+}
+
+.hero-points {
+  display: flex; flex-wrap: wrap; gap: 10px 24px;
+  margin-top: 32px; color: var(--muted); font-size: .95rem; font-weight: 500;
+}
+.hero-points li::before {
+  content: ""; display: inline-block;
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--purple); margin-right: 8px;
+}
+
+/* Hero CSS illustration */
+.hero-visual {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+}
+.mock {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 20px;
+  box-shadow: var(--glow); overflow: hidden; transform: rotate(-2deg);
+}
+.mock-bar {
+  display: flex; gap: 7px; padding: 14px 16px;
+  border-bottom: 1px solid var(--border); background: var(--surface-2);
+}
+.mock-bar span { width: 11px; height: 11px; border-radius: 50%; background: var(--border); }
+.mock-bar span:first-child { background: #ff6b6b; }
+.mock-bar span:nth-child(2) { background: #ffd166; }
+.mock-bar span:nth-child(3) { background: #4cd98a; }
+
+.mock-body { display: grid; grid-template-columns: 56px 1fr; min-height: 290px; }
+.mock-side {
+  border-right: 1px solid var(--border); padding: 16px 12px;
+  display: grid; gap: 14px; align-content: start;
+}
+.mock-side i { height: 24px; border-radius: 8px; background: var(--surface-2); }
+.mock-side i:first-child { background: linear-gradient(135deg, var(--purple), var(--purple-2)); }
+.mock-main { padding: 18px; display: grid; gap: 16px; }
+.mock-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.mock-cards b {
+  height: 54px; border-radius: 12px;
+  background: var(--surface-2); border: 1px solid var(--border);
+}
+.mock-chart {
+  display: flex; align-items: flex-end; gap: 12px; height: 140px; padding: 14px;
+  border-radius: 14px; background: var(--surface-2); border: 1px solid var(--border);
+}
+.mock-chart span {
+  flex: 1; height: var(--h); border-radius: 8px 8px 3px 3px;
+  background: linear-gradient(180deg, var(--purple-2), var(--purple));
+}
+
+.float {
+  position: absolute; width: 56px; height: 56px; display: grid; place-items: center;
+  border-radius: 16px; background: var(--surface); border: 1px solid var(--border);
+  box-shadow: var(--glow); color: var(--accent);
+  animation: bob 5s ease-in-out infinite;
+}
+.float .icon { width: 26px; height: 26px; }
+.f1 { top: -4px; right: 14px; }
+.f2 { bottom: 30px; left: -6px; animation-delay: -1.5s; }
+.f3 { bottom: -10px; right: 40px; animation-delay: -3s; }
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}

@@ -1,0 +1,19 @@
+/* =========================================================
+   Next Z Solutions — Why Us section
+   ========================================================= */
+
+.why-grid { grid-template-columns: repeat(4, 1fr); }
+
+.why { text-align: center; padding: 10px 14px; }
+
+.why-icon {
+  width: 68px; height: 68px; margin: 0 auto 18px; display: grid; place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--border); background: var(--surface);
+  color: var(--accent); box-shadow: var(--shadow);
+}
+.why-icon .icon { width: 28px; height: 28px; }
+
+.why h3 { font-size: 1.1rem; margin-bottom: 6px; }
+.why p { color: var(--muted); font-size: .95rem; }
+

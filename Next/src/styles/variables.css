@@ -1,0 +1,48 @@
+/* =========================================================
+   Next Z Solutions — CSS Custom Properties / Design Tokens
+   ========================================================= */
+
+:root {
+  --purple: #6d3df5;
+  --purple-2: #8b5cf6;
+  --purple-soft: #a78bfa;
+  --radius: 18px;
+  --radius-sm: 12px;
+  --header-h: 74px;
+  --maxw: 1380px;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+
+/* ---------- Dark theme ---------- */
+:root[data-theme="dark"] {
+  --bg: #0b0818;
+  --bg-alt: #100c24;
+  --surface: #151030;
+  --surface-2: #1c1640;
+  --border: rgba(167, 139, 250, .22);
+  --text: #f4f2ff;
+  --muted: #b3acd1;
+  --accent: #a78bfa;
+  --header-bg: rgba(11, 8, 24, .82);
+  --shadow: 0 10px 40px rgba(0, 0, 0, .45);
+  --glow: 0 0 0 1px rgba(167, 139, 250, .25), 0 12px 40px rgba(109, 61, 245, .25);
+  --hero-glow: radial-gradient(60% 60% at 80% 0%, rgba(109, 61, 245, .35), transparent 70%),
+               radial-gradient(40% 40% at 0% 100%, rgba(139, 92, 246, .18), transparent 70%);
+}
+
+/* ---------- Light theme ---------- */
+:root[data-theme="light"] {
+  --bg: #ffffff;
+  --bg-alt: #f6f4ff;
+  --surface: #ffffff;
+  --surface-2: #f1edff;
+  --border: rgba(109, 61, 245, .16);
+  --text: #16112e;
+  --muted: #5d567c;
+  --accent: #6d3df5;
+  --header-bg: rgba(255, 255, 255, .86);
+  --shadow: 0 10px 30px rgba(40, 20, 110, .10);
+  --glow: 0 0 0 1px rgba(109, 61, 245, .22), 0 12px 32px rgba(109, 61, 245, .16);
+  --hero-glow: radial-gradient(60% 60% at 85% 0%, rgba(139, 92, 246, .22), transparent 70%),
+               radial-gradient(40% 40% at 0% 100%, rgba(109, 61, 245, .10), transparent 70%);
+}

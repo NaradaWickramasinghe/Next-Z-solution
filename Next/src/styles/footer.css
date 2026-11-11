@@ -1,0 +1,45 @@
+/* =========================================================
+   Next Z Solutions — Footer
+   ========================================================= */
+
+.site-footer {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--border);
+  padding-top: 52px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 32px;
+  padding-bottom: 36px;
+}
+
+.footer-brand p { margin-top: 14px; color: var(--muted); font-size: .92rem; }
+
+.footer-links,
+.footer-contact {
+  display: grid; gap: 10px; align-content: start; color: var(--muted);
+}
+.footer-links a:hover,
+.footer-contact a:hover { color: var(--accent); }
+
+.footer-bottom {
+  display: flex; flex-wrap: wrap; justify-content: space-between;
+  gap: 8px; padding: 20px 0;
+  border-top: 1px solid var(--border);
+  color: var(--muted); font-size: .86rem;
+}
+
+/* WhatsApp floating button */
+.wa-float {
+  position: fixed; right: 20px; bottom: 20px; z-index: 90;
+  width: 56px; height: 56px;
+  display: grid; place-items: center;
+  border-radius: 50%; background: #1fa855; color: #fff;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, .35);
+  transition: transform .2s;
+}
+.wa-float:hover { transform: scale(1.08); }
+.wa-float .icon { width: 26px; height: 26px; }
+

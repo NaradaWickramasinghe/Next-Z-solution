@@ -1,0 +1,34 @@
+/* =========================================================
+   Next Z Solutions — Contact section
+   ========================================================= */
+
+.contact {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.contact-info { display: grid; gap: 14px; }
+
+.info-row {
+  display: flex; align-items: center; gap: 16px; padding: 18px 20px;
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  transition: border-color .2s, transform .2s;
+}
+.info-row:hover { border-color: var(--accent); transform: translateX(4px); }
+
+.info-icon {
+  width: 46px; height: 46px; display: grid; place-items: center;
+  border-radius: 12px; background: var(--surface-2); color: var(--accent); flex: none;
+}
+
+.info-row small { display: block; color: var(--muted); font-size: .8rem; }
+.info-row strong { font-size: 1rem; word-break: break-word; }
+
+.contact-form { padding: 30px; display: grid; gap: 18px; }
+
+.form-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.form-actions .btn { flex: 1 1 200px; }
+.form-note { font-size: .84rem; color: var(--muted); }
+

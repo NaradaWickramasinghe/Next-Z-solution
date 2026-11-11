@@ -1,0 +1,28 @@
+/* =========================================================
+   Next Z Solutions — About section
+   ========================================================= */
+
+.about {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 56px;
+  align-items: center;
+}
+.about-copy p { color: var(--muted); margin-top: 16px; }
+.about-copy h2 { margin-bottom: 4px; }
+.about-copy .btn { margin-top: 28px; }
+
+.about-panel { display: grid; gap: 16px; }
+
+.pillar {
+  display: flex; gap: 20px; align-items: flex-start; padding: 22px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); box-shadow: var(--shadow);
+}
+.pillar .num {
+  font-size: 1.6rem; font-weight: 800;
+  color: var(--accent); line-height: 1; min-width: 40px;
+}
+.pillar h3 { font-size: 1.1rem; margin-bottom: 4px; }
+.pillar p { color: var(--muted); font-size: .95rem; }
+

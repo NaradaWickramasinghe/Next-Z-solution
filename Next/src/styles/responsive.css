@@ -1,0 +1,63 @@
+/* =========================================================
+   Next Z Solutions — Responsive breakpoints
+   ========================================================= */
+
+/* Large Tablets & Laptops (<= 1200px) */
+@media (max-width: 1200px) {
+  .services-grid { grid-template-columns: repeat(3, 1fr); }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-inner { gap: 40px; }
+}
+
+/* Medium Tablets & Below (<= 992px) */
+@media (max-width: 992px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-inner, .about, .contact { grid-template-columns: 1fr; }
+  .hero-visual { max-width: 540px; margin-inline: auto; width: 100%; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-copy { text-align: center; }
+  .about-copy .btn { margin-inline: auto; }
+}
+
+/* Small Tablets & Mobile Navigation (<= 820px) */
+@media (max-width: 820px) {
+  .menu-btn { display: grid; }
+  .nav {
+    position: fixed; inset: var(--header-h) 0 auto 0;
+    flex-direction: column; align-items: stretch; gap: 8px;
+    padding: 24px; background: var(--bg); border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    transform: translateY(-120%); opacity: 0; visibility: hidden;
+    transition: transform .3s var(--ease), opacity .3s, visibility .3s;
+  }
+  .nav.open { transform: none; opacity: 1; visibility: visible; }
+  .nav ul { flex-direction: column; gap: 0; }
+  .nav ul a {
+    display: block; padding: 14px 4px;
+    border-bottom: 1px solid var(--border); font-size: 1.05rem;
+  }
+  .nav ul a::after { display: none; }
+  .nav-cta { margin-top: 12px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+}
+
+/* Mobile Phones (<= 640px) */
+@media (max-width: 640px) {
+  .services-grid, .why-grid, .field-row { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .stat-item { padding: 18px 12px; }
+  .process-grid { grid-template-columns: 1fr; }
+  .contact-form { padding: 20px; }
+  .hero-actions .btn { width: 100%; }
+  .float { display: none; }
+  .mock { transform: none; }
+  .brand-name { font-size: 1.5rem; }
+}
+
+/* Very Small Mobile Phones (<= 420px) */
+@media (max-width: 420px) {
+  .stats-grid { grid-template-columns: 1fr; }
+  .container { width: calc(100% - 24px); }
+  .contact-form { padding: 16px; }
+}

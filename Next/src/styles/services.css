@@ -1,0 +1,28 @@
+/* =========================================================
+   Next Z Solutions — Services grid
+   ========================================================= */
+
+.services-grid { grid-template-columns: repeat(4, 1fr); }
+
+.service {
+  padding: 28px 24px;
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s;
+}
+.service:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--glow);
+  border-color: var(--accent);
+}
+
+.svc-icon {
+  width: 52px; height: 52px; display: grid; place-items: center;
+  border-radius: 14px; margin-bottom: 20px;
+  background: linear-gradient(135deg, var(--purple), var(--purple-2));
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(109, 61, 245, .35);
+}
+.svc-icon .icon { width: 24px; height: 24px; }
+
+.service h3 { font-size: 1.12rem; margin-bottom: 8px; letter-spacing: -.01em; }
+.service p { color: var(--muted); font-size: .96rem; }
+

@@ -1,0 +1,65 @@
+/* =========================================================
+   Next Z Solutions — Header & Navigation
+   ========================================================= */
+
+.site-header {
+  position: sticky; top: 0; z-index: 100; height: var(--header-h);
+  background: var(--header-bg);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  height: 100%;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+}
+
+/* Brand */
+.brand { display: inline-flex; flex-direction: column; line-height: 1; }
+.brand-name { font-size: 1.7rem; font-weight: 800; letter-spacing: -.03em; }
+.brand-name .z {
+  background: linear-gradient(135deg, var(--purple-soft), var(--purple));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  font-style: italic; padding-right: 2px;
+}
+.brand-sub {
+  font-size: .6rem; letter-spacing: .55em; text-transform: uppercase;
+  color: var(--muted); margin-top: 4px; font-weight: 600;
+}
+
+/* Nav */
+.nav { display: flex; align-items: center; gap: 28px; }
+.nav ul { display: flex; gap: 28px; }
+.nav ul a {
+  font-weight: 500; color: var(--muted);
+  padding: 6px 0; position: relative; transition: color .2s;
+}
+.nav ul a::after {
+  content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 0;
+  background: var(--purple); transition: width .25s var(--ease);
+}
+.nav ul a:hover,
+.nav ul a.active { color: var(--text); }
+.nav ul a:hover::after,
+.nav ul a.active::after { width: 100%; }
+.nav-cta { padding: 10px 20px; }
+
+/* Header action buttons */
+.header-actions { display: flex; align-items: center; gap: 10px; }
+
+.icon-btn {
+  width: 42px; height: 42px; display: grid; place-items: center;
+  border-radius: 50%; border: 1px solid var(--border); background: var(--surface);
+  cursor: pointer; transition: border-color .2s, transform .2s;
+}
+.icon-btn:hover { border-color: var(--accent); transform: translateY(-1px); }
+.icon-btn .icon { width: 20px; height: 20px; }
+
+:root[data-theme="dark"] .icon-moon { display: none; }
+:root[data-theme="light"] .icon-sun { display: none; }
+
+.menu-btn { display: none; }
+.menu-btn .icon-shut { display: none; }
+.menu-btn[aria-expanded="true"] .icon-open { display: none; }
+.menu-btn[aria-expanded="true"] .icon-shut { display: block; }
+

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Next Z Solutions | Your One-Stop Tech &amp; Creative Partner</title>
+  <meta name="description" content="Next Z Solutions offers system development, digital marketing, SEO, video editing, RPA &amp; automation, mobile apps, chatbots and graphic design.">
+  <meta name="theme-color" content="#6d3df5">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    /* Set theme before paint to avoid flash */
+    (function () {
+      try {
+        var saved = localStorage.getItem('nz-theme');
+        var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) { document.documentElement.setAttribute('data-theme', 'dark'); }
+    })();
+  </script>
+</head>
+<body>
+
+<!-- SVG icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol>
+    <symbol id="i-megaphone" viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24"><rect x="2" y="5" width="14" height="14" rx="2"/><polygon points="22 8 16 12 22 16"/></symbol>
+    <symbol id="i-robot" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="12" rx="3"/><line x1="12" y1="8" x2="12" y2="4"/><circle cx="12" cy="3" r="1"/><circle cx="9" cy="14" r="1"/><circle cx="15" cy="14" r="1"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.3h6c0-1 .4-1.8 1-2.3A7 7 0 0 0 12 2z"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-bolt" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22 6 12 13 2 6"/></symbol>
+    <symbol id="i-call" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.2" y1="19.8" x2="5.6" y2="18.4"/><line x1="18.4" y1="5.6" x2="19.8" y2="4.2"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="#home" class="brand" aria-label="Next Z Solutions home">
+      <span class="brand-name">Next <span class="z">Z</span></span>
+      <span class="brand-sub">Solutions</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary nav-cta">Get in Touch</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to light theme">
+        <svg class="icon icon-moon"><use href="#i-moon"/></svg>
+        <svg class="icon icon-sun"><use href="#i-sun"/></svg>
+      </button>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <svg class="icon icon-open"><use href="#i-menu"/></svg>
+        <svg class="icon icon-shut"><use href="#i-close"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow">Innovate &bull; Automate &bull; Grow</p>
+        <h1>Your One-Stop <span class="grad">Tech &amp; Creative</span> Partner</h1>
+        <p class="lead">From smart systems to stunning visuals, Next Z Solutions brings your ideas to life with innovative and reliable solutions.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Get in Touch Today
+            <svg class="icon"><use href="#i-arrow"/></svg>
+          </a>
+          <a href="#services" class="btn btn-ghost">Explore Services</a>
+        </div>
+        <ul class="hero-points">
+          <li>Custom software</li>
+          <li>Marketing &amp; SEO</li>
+          <li>Apps &amp; automation</li>
+        </ul>
+      </div>
+
+      <!-- Decorative CSS illustration: no stock images, no AI art -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="mock">
+          <div class="mock-bar"><span></span><span></span><span></span></div>
+          <div class="mock-body">
+            <div class="mock-side">
+              <i></i><i></i><i></i><i></i>
+            </div>
+            <div class="mock-main">
+              <div class="mock-cards"><b></b><b></b><b></b></div>
+              <div class="mock-chart">
+                <span style="--h:35%"></span><span style="--h:55%"></span><span style="--h:42%"></span>
+                <span style="--h:70%"></span><span style="--h:60%"></span><span style="--h:88%"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="float f1"><svg class="icon"><use href="#i-code"/></svg></div>
+        <div class="float f2"><svg class="icon"><use href="#i-search"/></svg></div>
+        <div class="float f3"><svg class="icon"><use href="#i-phone"/></svg></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="section" id="services">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">What We Do</p>
+        <h2>Services built around your business</h2>
+        <p class="section-lead">Everything you need to build, promote and automate, under one roof.</p>
+      </header>
+
+      <div class="grid services-grid">
+        <article class="card service">
+          <div class="svc-icon"><svg class="icon"><use href="#i-code"/></svg></div>
+          <h3>System Development</h3>
+          <p>Custom software solutions tailored to your needs.</p>
+        </article>
+        <article class="card service">
+          <div class="svc-icon"><svg class="icon"><use href="#i-megaphone"/></svg></div>
+          <h3>Digital Marketing</h3>
+          <p>Grow your brand with strategic and result-driven marketing.</p>
+        </article>
+        <article class="card service">
+          <div class="svc-icon"><svg class="icon"><use href="#i-search"/></svg></div>
+          <h3>SEO Handling</h3>
+          <p>Rank higher. Get noticed. Drive more traffic.</p>
+        </article>
+        <article class="card service">
+          <div class="svc-icon"><svg class="icon"><use href="#i-video"/></svg></div>
+          <h3>Video Editing &amp; Creation</h3>
+          <p>Turn moments into compelling stories.</p>
+        </article>
+        <article class="card service">
+          <div class="svc-icon"><svg class="icon"><use href="#i-robot"/></svg></div>
+          <h3>RPA &amp; Automation</h3>
+          <p>Automate repetitive tasks and work smarter.</p>
+        </article>
+        <article class="card service">
+          <div class="svc-icon"><svg class="icon"><use href="#i-phone"/></svg></div>
+          <h3>Mobile App Creation</h3>
+          <p>Build powerful and user-friendly mobile apps.</p>
+        </article>
+        <article class="card service">
+          <div class="svc-icon"><svg class="icon"><use href="#i-chat"/></svg></div>
+          <h3>Chatbot Creation</h3>
+          <p>Automate conversations and enhance customer support.</p>
+        </article>
+        <article class="card service">
+          <div class="svc-icon"><svg class="icon"><use href="#i-pen"/></svg></div>
+          <h3>Graphic Designing</h3>
+          <p>Bring your ideas to life with stunning designs.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY US ============ -->
+  <section class="section section-alt" id="why-us">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Why Next Z Solutions</p>
+        <h2>What you can count on</h2>
+        <p class="section-lead">Four commitments that guide every project we take on.</p>
+      </header>
+
+      <div class="grid why-grid">
+        <div class="why">
+          <div class="why-icon"><svg class="icon"><use href="#i-bulb"/></svg></div>
+          <h3>Innovative Solutions</h3>
+          <p>Fresh, practical ideas that fit your goals.</p>
+        </div>
+        <div class="why">
+          <div class="why-icon"><svg class="icon"><use href="#i-users"/></svg></div>
+          <h3>Professional Support</h3>
+          <p>A responsive team that stays with you after launch.</p>
+        </div>
+        <div class="why">
+          <div class="why-icon"><svg class="icon"><use href="#i-bolt"/></svg></div>
+          <h3>On-Time Delivery</h3>
+          <p>Clear timelines, and we keep to them.</p>
+        </div>
+        <div class="why">
+          <div class="why-icon"><svg class="icon"><use href="#i-shield"/></svg></div>
+          <h3>Affordable Pricing</h3>
+          <p>Quality work that respects your budget.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container about">
+      <div class="about-copy">
+        <p class="eyebrow">About Us</p>
+        <h2>Your vision, our solution</h2>
+        <p>Next Z Solutions is a technology and creative partner that helps businesses innovate, automate and grow. We combine software engineering with creative design and marketing, so you do not need to juggle several vendors.</p>
+        <p>Whether you need a custom system, a mobile app, a chatbot, a stronger search presence or a polished brand identity, we bring your ideas to life with solutions that are reliable and built around you.</p>
+        <a href="#contact" class="btn btn-primary">Let's Create Something Great Together
+          <svg class="icon"><use href="#i-arrow"/></svg>
+        </a>
+      </div>
+      <div class="about-panel">
+        <div class="pillar"><span class="num">01</span><div><h3>Innovate</h3><p>We design smart systems and creative work that set you apart.</p></div></div>
+        <div class="pillar"><span class="num">02</span><div><h3>Automate</h3><p>We remove repetitive tasks so your team can focus on what matters.</p></div></div>
+        <div class="pillar"><span class="num">03</span><div><h3>Grow</h3><p>We help you reach more people and turn attention into results.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="cta-band">
+    <div class="container cta-inner">
+      <h2>Let's Create Something Great Together!</h2>
+      <p>Tell us about your idea and we will help you take the next step.</p>
+      <div class="hero-actions">
+        <a href="https://wa.me/94764893143" class="btn btn-light" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        <a href="tel:+94764893143" class="btn btn-outline-light">Call 076 489 3143</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <header class="section-head">
+        <p class="eyebrow">Contact</p>
+        <h2>Get in touch today</h2>
+        <p class="section-lead">Send us a message by WhatsApp or email. Whichever you prefer.</p>
+      </header>
+
+      <div class="contact">
+        <div class="contact-info">
+          <a class="info-row" href="tel:+94764893143">
+            <span class="info-icon"><svg class="icon"><use href="#i-call"/></svg></span>
+            <span><small>Phone</small><strong>076 489 3143</strong></span>
+          </a>
+          <a class="info-row" href="https://wa.me/94764893143" target="_blank" rel="noopener">
+            <span class="info-icon"><svg class="icon"><use href="#i-chat"/></svg></span>
+            <span><small>WhatsApp</small><strong>076 489 3143</strong></span>
+          </a>
+          <a class="info-row" href="mailto:nextzsolution88@gmail.com">
+            <span class="info-icon"><svg class="icon"><use href="#i-mail"/></svg></span>
+            <span><small>Email</small><strong>nextzsolution88@gmail.com</strong></span>
+          </a>
+        </div>
+
+        <form class="card contact-form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+            <span class="err" aria-live="polite"></span>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="phone">Phone <span class="opt">(optional)</span></label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="email">Email <span class="opt">(optional)</span></label>
+              <input id="email" name="email" type="email" autocomplete="email">
+              <span class="err" aria-live="polite"></span>
+            </div>
+          </div>
+          <div class="field">
+            <label for="service">Service needed</label>
+            <select id="service" name="service" required>
+              <option value="">Select a service</option>
+              <option>System Development</option>
+              <option>Digital Marketing</option>
+              <option>SEO Handling</option>
+              <option>Video Editing &amp; Creation</option>
+              <option>RPA &amp; Automation</option>
+              <option>Mobile App Creation</option>
+              <option>Chatbot Creation</option>
+              <option>Graphic Designing</option>
+              <option>Other</option>
+            </select>
+            <span class="err" aria-live="polite"></span>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span class="err" aria-live="polite"></span>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn btn-whatsapp" id="sendWhatsapp">
+              <svg class="icon"><use href="#i-chat"/></svg> Send via WhatsApp
+            </button>
+            <button type="button" class="btn btn-primary" id="sendEmail">
+              <svg class="icon"><use href="#i-mail"/></svg> Send via Email
+            </button>
+          </div>
+          <p class="form-note">Clicking a button opens WhatsApp or your email app with your message ready to send.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="#home" class="brand" aria-label="Next Z Solutions home">
+        <span class="brand-name">Next <span class="z">Z</span></span>
+        <span class="brand-sub">Solutions</span>
+      </a>
+      <p>Innovate &bull; Automate &bull; Grow</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="footer-contact">
+      <a href="tel:+94764893143">076 489 3143</a>
+      <a href="mailto:nextzsolution88@gmail.com">nextzsolution88@gmail.com</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; <span id="year">2026</span> Next Z Solutions. All rights reserved.</p>
+    <p>Your vision, our solution.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/94764893143" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg class="icon"><use href="#i-chat"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
